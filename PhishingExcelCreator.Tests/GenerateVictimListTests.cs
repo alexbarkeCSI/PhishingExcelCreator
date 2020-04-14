@@ -51,9 +51,9 @@ namespace PhishingExcelCreator.Tests
         0);
 
       List<Victim> inputVictims = new List<Victim>();
-      inputVictims.Add(new Victim("Aaron Jones", "aaron.jones@csintelligence.asia", "R&D"));
-      inputVictims.Add(new Victim("John Doe", "john.doe@csintelligence.asia", "Sales"));
       inputVictims.Add(new Victim("John Meyers", "john.meyers@csintelligence.asia", "Sales"));
+      inputVictims.Add(new Victim("John Doe", "john.doe@csintelligence.asia", "Sales"));
+      inputVictims.Add(new Victim("Aaron Jones", "aaron.jones@csintelligence.asia", "R&D"));
 
       GenerateOptions options = new GenerateOptions();
       options.Randomize = false;

@@ -39,7 +39,7 @@ namespace Lib.GenerateVictimList
 
     private List<GeneratedVictim> GroupByDept(List<Victim> victimInputs, GenerateOptions options)
     {
-      List<Victim> sortedVictims = victimInputs.OrderBy(p => p.Dept).ToList();
+      List<Victim> sortedVictims = victimInputs.OrderBy(p => p.Dept).ThenBy(q => q.Name).ToList();
       DateTime sendOutTime = options.StartAtDateTime;
 
       List<GeneratedVictim> output = new List<GeneratedVictim>();
