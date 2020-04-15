@@ -1,7 +1,6 @@
 using Xunit;
 using Lib.Models;
 using System.Collections.Generic;
-using Autofac.Extras.Moq;
 using System;
 using Lib.GenerateVictimList;
 
@@ -77,6 +76,10 @@ namespace PhishingExcelCreator.Tests
       Assert.Equal("aaron.jones@csintelligence.asia", actual[0].Email);
       Assert.Equal("john.doe@csintelligence.asia", actual[1].Email);
       Assert.Equal("john.meyers@csintelligence.asia", actual[2].Email);
+
+      Assert.Equal(new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day + 1, 12, 0, 0), actual[0].SendOutTime);
+      Assert.Equal(new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day + 1, 12, 5, 0), actual[1].SendOutTime);
+      Assert.Equal(new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day + 1, 12, 10, 0), actual[2].SendOutTime);
     }
   }
 }

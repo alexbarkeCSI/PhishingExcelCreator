@@ -9,7 +9,8 @@ namespace Lib.ReadVictimList
     public List<Victim> GetVictimJson()
     {
       const string path = "D:\\PhishingExcelCreator\\PhishingExcelCreator\\ConsoleApp\\bin\\Debug\\netcoreapp3.1\\data.json";
-      List<Victim> victims = JsonSerializer.Deserialize<List<Victim>>(path);
+      string text = System.IO.File.ReadAllText(path);
+      List<Victim> victims = JsonSerializer.Deserialize<List<Victim>>(text);
       return victims;
     }
   }

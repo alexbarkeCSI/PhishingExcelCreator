@@ -11,5 +11,12 @@ namespace Lib.GenerateVictimList
     public GenerateOptions()
     {
     }
+
+    public GenerateOptions(bool randomize, uint minutesBetweenScheduledEmails, DateTime startAtDateTime)
+    {
+      Randomize = randomize;
+      MinutesBetweenScheduledEmails = minutesBetweenScheduledEmails;
+      StartAtDateTime = startAtDateTime;
+    }
   }
 }
