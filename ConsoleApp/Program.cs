@@ -41,7 +41,11 @@ namespace ConsoleApp
       GenerateOptions options = new GenerateOptions(
         true,
         5,
-        startAtDateTime);
+        startAtDateTime,
+        8,
+        30,
+        18,
+        0);
 
       List<Lib.Models.GeneratedVictim> generatedVictims = generateVictims.GenerateVictimList(victims, options);
 
