@@ -8,7 +8,7 @@ namespace Lib.ReadVictimList
   {
     public List<Victim> GetVictimJson()
     {
-      const string path = "D:\\PhishingExcelCreator\\PhishingExcelCreator\\ConsoleApp\\bin\\Debug\\netcoreapp3.1\\data.json";
+      const string path = "D:\\PhishingExcelCreator\\PhishingExcelCreator\\ConsoleApp\\bin\\Debug\\netcoreapp3.1\\data2.json";
       string text = System.IO.File.ReadAllText(path);
       List<Victim> victims = JsonSerializer.Deserialize<List<Victim>>(text);
       return victims;

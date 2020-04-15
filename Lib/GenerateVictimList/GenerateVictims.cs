@@ -22,10 +22,10 @@ namespace Lib.GenerateVictimList
 
       List<GeneratedVictim> output = new List<GeneratedVictim>();
 
-      // shuffle order of victims
-      victimInputs.Shuffle();
+      Console.WriteLine("Shuffling...");
+      List<Victim> shuffled = victimInputs.OrderBy(a => Guid.NewGuid()).ToList();
 
-      foreach (Victim victim in victimInputs)
+      foreach (Victim victim in shuffled)
       {
         GeneratedVictim generatedVictim = new GeneratedVictim(victim.Name, victim.Email, sendOutTime, victim.Dept);
 
