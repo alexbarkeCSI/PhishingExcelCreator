@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using Lib.Models;
 using System;
 using System.Linq;
-using Lib.ListExtensions;
 
 namespace Lib.GenerateVictimList
 {
